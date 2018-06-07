@@ -1,4 +1,5 @@
 import time
+import math
 from rgkit.render.settings import settings as render_settings
 
 
@@ -8,9 +9,9 @@ def millis():
 
 def rgb_to_hex(r, g, b, normalized=True):
     if normalized:
-        return '#%02x%02x%02x' % (r * 255, g * 255, b * 255)
+        return '#%02x%02x%02x' % (math.floor(r * 255), math.floor(g * 255), math.floor(b * 255))
     else:
-        return '#%02x%02x%02x' % (r, g, b)
+        return '#%02x%02x%02x' % (math.floor(r), math.floor(g), math.floor(b))
 
 
 def rgb_tuple_to_hex(rgb, normalized=True):
