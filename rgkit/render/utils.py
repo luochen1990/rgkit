@@ -9,9 +9,9 @@ def millis():
 
 def rgb_to_hex(r, g, b, normalized=True):
     if normalized:
-        return '#%02x%02x%02x' % (math.floor(r * 255), math.floor(g * 255), math.floor(b * 255))
+        return '#%02x%02x%02x' % (int(0.5 + r * 255), int(0.5 + g * 255), int(0.5 + b * 255))
     else:
-        return '#%02x%02x%02x' % (math.floor(r), math.floor(g), math.floor(b))
+        return '#%02x%02x%02x' % (int(0.5 + r), int(0.5 + g), int(0.5 + b))
 
 
 def rgb_tuple_to_hex(rgb, normalized=True):
